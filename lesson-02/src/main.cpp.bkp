@@ -1,0 +1,40 @@
+import mexample;
+
+#include <iostream>
+
+#include "header1.hpp"
+
+int foo()
+{
+    for(size_t i = 0; i < 1000; ++i);
+    return 10;
+}
+
+int boo()
+{
+    for(size_t i = 0; i < 1000; ++i);
+    return 10;
+}
+
+/*
+ * ODR
+int foo()
+{
+    return 20;
+}
+*/
+
+int main()
+{
+    std::cout << gVar2 << " : " << a << " : " << dzen::a << std::endl;
+    int *ptr = NULL; // нужно использовать nullptr
+    int64_t num = 10;
+    /*for (size_t i = 0; i >= 0; i--)
+    {
+        if (num > i)
+            std::cout << i << std::endl;
+    }*/
+    //nonexported_square(2);
+    Foo sfoo;
+    return square(4) + foo() + boo() + msquare(2) + sfoo.sum(); // Segmentation fault+ *ptr;
+}
